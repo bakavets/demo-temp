@@ -9,7 +9,7 @@ spec:
   project: development
   source:
     path: k8s/development/
-    repoURL: https://github.com/bakavetsbiz/demo-dsd.git
+    repoURL: https://github.com/bakavets/demo-temp.git
     targetRevision: {{ .Values.targetRevision }}
 
   destination:
