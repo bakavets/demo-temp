@@ -9,8 +9,6 @@ awsRegion: eu-west-1
 metricsServer:
   version: 3.12.0
 
-
-
 externalDNS:
   version: 6.7.1
   domain: example.com

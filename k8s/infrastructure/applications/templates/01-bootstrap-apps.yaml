@@ -11,6 +11,16 @@ spec:
     path: k8s/infrastructure/charts/bootstrap-apps/
     repoURL: https://github.com/bakavets/demo-temp.git
     targetRevision: {{ .Values.targetRevision }}
+    helm:
+      values: |
+        externalDNS:
+          domain: {{ .Values.externalDNS.domain }}
+          txtOwnerId: {{ .Values.externalDNS.txtOwnerId }}
+          serviceAccount:
+            name: {{ .Values.externalDNS.serviceAccount.name }}
+            eksRoleARN: {{ .Values.externalDNS.serviceAccount.eksRoleARN }}
+          namespace: {{ .Values.externalDNS.namespace }}
+
         
   destination:
     namespace: argocd
