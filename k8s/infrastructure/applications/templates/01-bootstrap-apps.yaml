@@ -9,7 +9,7 @@ spec:
   project: infrastructure
   source:
     path: k8s/infrastructure/charts/bootstrap-apps/
-    repoURL: https://github.com/bakavetsbiz/demo-dsd.git
+    repoURL: https://github.com/bakavets/demo-temp.git
     targetRevision: {{ .Values.targetRevision }}
     # helm:
     #   values: |
