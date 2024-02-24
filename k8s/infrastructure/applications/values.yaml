@@ -4,8 +4,6 @@ awsRegion: eu-west-1
 
 domain: example.com
 
-certManager_sa_eks_role_arn: arn:aws:iam::12345678901:role/cert-manager-role
-
 externalDNS:
   domain: example@example.com
   txtOwnerId: Z049EXAMPLE
