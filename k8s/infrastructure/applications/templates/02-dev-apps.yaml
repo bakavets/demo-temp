@@ -11,12 +11,6 @@ spec:
     path: k8s/development/
     repoURL: https://github.com/bakavetsbiz/demo-dsd.git
     targetRevision: {{ .Values.targetRevision }}
-    helm:
-      values: |
-        appHosts:
-          apitextstat: {{ .Values.appHosts.apitextstat }}
-          testApp1: {{ .Values.appHosts.testApp1 }}
-          testApp2: {{ .Values.appHosts.testApp2 }}
 
   destination:
     namespace: argocd

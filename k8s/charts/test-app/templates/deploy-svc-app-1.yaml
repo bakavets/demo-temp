@@ -19,6 +19,27 @@ spec:
         image: bakavets/kuber:v1.0
         ports:
         - containerPort: 8000
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "1000m"
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-type
+                    operator: In
+                    values:
+                      - runner
+      tolerations:
+        - key: type
+          operator: Equal
+          value: spot-node
+          effect: NoSchedule
 ---
 apiVersion: v1
 kind: Service

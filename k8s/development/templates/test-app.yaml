@@ -9,13 +9,8 @@ spec:
   project: development
   source:
     path: k8s/charts/test-app/
-    repoURL: https://github.com/bakavetsbiz/demo-dsd.git
+    repoURL: https://github.com/bakavets/demo-temp.git
     targetRevision: {{ .Values.targetRevision }}
-    helm:
-      values: |
-        hosts:
-          app1: {{ .Values.appHosts.testApp1 }}
-          app2: {{ .Values.appHosts.testApp2 }}
 
   destination:
     server: 'https://kubernetes.default.svc'
