@@ -1,0 +1,24 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+
+targetRevision: main
+
+awsRegion: eu-west-1
+
+metricsServer:
+  version: 3.12.0
+
+
+
+externalDNS:
+  version: 6.7.1
+  domain: example.com
+  txtOwnerId: Z12345DZFEXAMPLE
+  loglevel: info
+  zoneType: public
+  policy: upsert-only
+  namespace: kube-system
+  serviceAccount:
+    name: external-dns
+    eksRoleARN: arn:aws:iam::12345678912:role/external-dns
